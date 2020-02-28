@@ -32,7 +32,8 @@ public class CasaShow {
 	private String cidadeCasa;
 	
 	@NotEmpty(message = "Nome da casa obrigatorio.")
-	@Size(max = 50 , message = "O nome da casa não pode conter mais de 35 caracteres.")
+	@Size(max = 15 , message = "O nome da casa não pode conter mais de 15 caracteres.")
+	@Size(min=10 , message = "O endeço deve ter no minímo 10 caracteres.")
 	private String nomeCasa;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="selecinarCasas")
