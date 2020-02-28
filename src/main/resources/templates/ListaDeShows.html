@@ -33,10 +33,10 @@
         <td class="text-center" th:text="${evento.selecionarGenero.descricao}"></td>
         <td class="text-center" th:text=${evento.selecinarCasas.nomeCasa} ></td>
         <td class="text-right">
-        	<a class = "btn btn-link btn-xs" title="Editar" rel="tooltip" data-placement="top" th:href="@{/home/novoEvento/{codigo}(codigo=${evento.codigo})}" >
-        		<span  ><img src="/imagens/editar.png" width="30" height="30"> </span>
+        	<a class = "btn btn-link btn-xs btn-outline-dark" title="Editar" rel="tooltip" data-placement="top" th:href="@{/home/novoEvento/{codigo}(codigo=${evento.codigo})}" >
+        		<span   ><img src="/imagens/editar.png" width="30" height="30"> </span>
         	</a>
-        	<a class = " btn btn-link btn-xs  " title="Excluir" rel="tooltip" data-placement="top" data-toggle="modal" data-target="#excluirShow" th:attr="data-codigo=${evento.codigo}" >
+        	<a class = " btn btn-link btn-xs btn-outline-dark  " title="Excluir" rel="tooltip" data-placement="top" data-toggle="modal" data-target="#excluirShow" th:attr="data-codigo=${evento.codigo}" >
         		<span  ><img src="/imagens/excluir.png" width="25" height="25"> </span>
         	</a>
         </td>

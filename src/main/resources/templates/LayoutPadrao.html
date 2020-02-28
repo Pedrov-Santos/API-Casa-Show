@@ -15,41 +15,53 @@
 
 
 <body id="body" class=" body responsive">
-<button type="button" class="btn btn-outline-primary" id="botaoLogin">Conecte-se</button>
-<button type="button" class="btn btn-outline-light" id="botaoLogin">Cadastrar-se</button>
-
-<ul class="nav justify-content-center">
-<li class="nav-item dropdown">
-
-      <a class="nav-link btn btn-light"  href="/home" >Principais Eventos</a>
-    
-  </li>
-
-
-  <li class="nav-item">
-          <a class="nav-link btn btn-light" href="/home/novoEvento">Novo evento</a>
-  </li>
-  
-  <li class="nav-item">
-          <a class="nav-link btn btn-light" href="/home/novaCasa">Nova casa de Show</a>
-  </li>
-  
-  <li class="nav-item">
-    <a class="nav-link btn btn-light " href="/home/listaShows">Shows Cadastrados</a>
-  </li>
-
-  
-  <li class="nav-item">
-    <a class="nav-link btn btn-light " href="/home/listaCasas">Casas de Shows</a>
-  </li>
-  
-  
-  
-</ul>
+<!--<button type="button" class="btn btn-outline-primary" id="botaoLogin">Conecte-se</button>-->
+<div class="row" >
+	<div class="col-sm-11" style="background:black; padding:10px; border-bottom: 1px solid #black;">
+	
+		<ul class="nav justify-content-center">
+		<li class="nav-item dropdown">
+		
+		      <a class="nav-link btn btn-light"  href="/home" >Eventos</a>
+		    
+		  </li>
+		
+		
+		  <li class="nav-item">
+		          <a class="nav-link btn btn-light" href="/home/novoEvento">Novo evento</a>
+		  </li>
+		  
+		  <li class="nav-item">
+		          <a class="nav-link btn btn-light" href="/home/novaCasa">Nova casa de Show</a>
+		  </li>
+		  
+		  <li class="nav-item">
+		    <a class="nav-link btn btn-light " href="/home/listaShows">Shows Cadastrados</a>
+		  </li>
+		
+		  
+		  <li class="nav-item">
+		    <a class="nav-link btn btn-light " href="/home/listaCasas">Casas de Shows</a>
+		  </li>
+		  
+		  
+		  
+		</ul>
+	</div>
+	
+	<div class="col-sm-1" style="padding:35px; background:#000; border-bottom: 1px solid black">
+		<a  href="/home/carrinho"  id="botaoLogin"  type="button" class="btn btn-light "> <img alt="" src="/imagens/carrinho.png" width="25" height="25" > </a>
+	</div>
+	
+</div>
 
 <section layout:fragment="conteudo"></section>
 
+
+
+
 	
+
 
 	<script src="/js/jquery-3.4.1.min.js"></script>
 	<script th:src="@{/js/bootstrap.min.js}"></script>
@@ -65,4 +77,5 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </body>
+
 </html>

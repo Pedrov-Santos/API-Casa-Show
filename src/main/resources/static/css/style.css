@@ -5,38 +5,31 @@
     text-transform: uppercase;
     margin: 0 10px 0 0;
     padding: 10px 25px;
-    border: 1px solid #fff;
+    border: 1px solid #000;
     display: inline-block;
     
    
-}#carouselExampleIndicators{
-	  position: relative;
-
-  display: -webkit-box;
-  display: flex;
-
-  max-width: 70rem;
-  min-height: 35mre;
-  margin: auto;
-
- 
-
-  -webkit-box-pack: center;
-  justify-content: center;
-  
-   padding-top: 45px;
-    
 }
+.cor{
+	color: #000;
+}
+.card{
+	margin: 100px 250px 0px 650px ;
+}
+
 .body{
-	background-image: url(/imagens/fundo6.jpg);
+	
+	background-image: url(/imagens/fundo8.jpg);
 	background-repeat: no-repeat;
-	background-size: 150%
+	background-size: 110%
+	
 }
 .nav{
     text-transform: uppercase;
     margin: 25px 10px 0 0;	 
 }
 .nav-item{
+	
 	margin: 0 5px 0 0 ;
 }
 
@@ -55,12 +48,13 @@
 	  border-radius: 25px;
     font-weight: bold;
     text-transform: uppercase;
+   
 }
 #salvar{
-	margin:5px 0px 0 403px;
+	margin:5px 0px 0 315px;
 }
 .form-gruop{
-	margin:5px 0 5px 0;
+	margin:0px 0px 5px 0px;
 }
 .list-group{
 	margin: 10px 200px 0 200px ;	
@@ -69,17 +63,21 @@
 	   
  
 }
+.section{
+	color: #000;
+	
+}
 .section_title{
 	font-weight: 800;
     font-size: 50px;
-    margin:150px 0 30px 0;
+    margin: 150px 0 25px 0;
     position: relative;
     text-align: center;
     text-transform: uppercase;
-    color: #fff;
+    color: #000;
 }
 #tabela{
-	   color: #fff;
+	   color: #000;
 
 	   font-size: 20px;
     
@@ -96,14 +94,14 @@
     text-transform: uppercase;
 }
 #th1{
-	 border-bottom: 1px solid #fff; 
+	 border-bottom: 1px solid #000; 
 }
 .our_event_list {
     
-     border-bottom: 1px solid #fff; 
+     border-bottom: 1px solid #000; 
     
      font-weight: bold;
-     color: #fff;
+     color: #000;
      
      
 }
@@ -119,16 +117,29 @@
 	
 }
 #texto{
-	color: white;
+	color: #000;
 }
 
 #texto-cor{
-
-   
-    
-   color: white;
-    
+   color: #000;
 }
+
+#dataEvento{
+	margin: 0px 0px 0px 6px;
+}
+#listaEventos{
+	background-image: url(/imagens/fundocinza.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%
+}
+#preto{
+	color: #000;
+}
+.centro{
+	margin: 0px 0px 5px 580px;
+}
+
+
 
 
 

@@ -6,4 +6,5 @@ import com.example.demo.model.Compra;
 
 public interface CompraRepository extends JpaRepository<Compra, Long> {
 
+	
 }

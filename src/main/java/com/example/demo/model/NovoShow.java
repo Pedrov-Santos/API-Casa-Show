@@ -31,7 +31,7 @@ public class NovoShow {
 	private String nomeEvento;
 	
 	@NotNull
-	@Min(value = 50 , message = "Capacidade mínima 50 PESSOAS")
+	@Min(value = 50 , message = "No minimo 50 ingressos disponiveis.")
 	private int capacidadeEvento;
 	
 	@NotNull

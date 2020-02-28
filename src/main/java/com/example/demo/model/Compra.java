@@ -9,6 +9,9 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
+
+import org.springframework.format.annotation.NumberFormat;
 
 @Entity
 public class Compra {
@@ -17,15 +20,39 @@ public class Compra {
 	@Id
 	private Long codigo;
 	
-	@ManyToOne
-	private Cliente cliente;
-	
+		
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date dataCompra = new Date();
 	
 	private String formaPagamento; 
 	
-	private Double valorTotal;
+	@NumberFormat(pattern = "#,##0.00")
+	private Double valorTotal=0. ;
+	
+	@NotNull
+	private String nomeComprador;
+	
+	@ManyToOne
+	private ItensCompras itensComprado;
+	
+	private Integer quantidade =0;
+	
+
+	public Integer getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(Integer quantidade) {
+		this.quantidade = quantidade;
+	}
+
+	public ItensCompras getItensComprado() {
+		return itensComprado;
+	}
+
+	public void setItensComprado(ItensCompras itensComprado) {
+		this.itensComprado = itensComprado;
+	}
 
 	public Long getCodigo() {
 		return codigo;
@@ -35,14 +62,7 @@ public class Compra {
 		this.codigo = codigo;
 	}
 
-	public Cliente getCliente() {
-		return cliente;
-	}
-
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
-	}
-
+	
 	public Date getDataCompra() {
 		return dataCompra;
 	}
@@ -65,6 +85,14 @@ public class Compra {
 
 	public void setValorTotal(Double valorTotal) {
 		this.valorTotal = valorTotal;
+	}
+
+	public String getNomeComprador() {
+		return nomeComprador;
+	}
+
+	public void setNomeComprador(String nomeComprador) {
+		this.nomeComprador = nomeComprador;
 	}
 	
 	

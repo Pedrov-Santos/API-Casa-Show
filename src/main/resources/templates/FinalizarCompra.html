@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="LayoutPadrao">
+
+<section layout:fragment="conteudo">
+
+
+	<h2 class="section_title">Finalizar Compra</h2>
+	
+	
+	<form action="/home/carrinho/finalizar/compra" method="post">
+	
+	
+	<div class="row container-center centro">
+		<div class="col-6">
+			<div class="table-responsive">
+				<table class="table table-striped ">
+					<tbody id="texto-cor">
+						<tr>
+							<th></th>
+							<th>Show</th>
+							<th class="text-center"></th>
+							<th class="text-center">Quantidade de ingressos</th>
+							<th class="text-right">Valor</th>
+							<th></th>
+						</tr>
+
+
+
+						<tr th:each="venda : ${listaVenda}">
+							<td><img th:src="@{/imagens/generos/{nomeImagem}.jpg(nomeImagem=${venda.show.selecionarGenero})}" width="70" height="60"></td>
+							
+							<td th:text="${venda.show.nomeEvento}"></td>
+							
+							<td class="text-center"></td>
+							
+							<td class="text-center" th:text="${venda.quantidade}" >
+							</td>
+						
+							
+														
+							<td class="text-right" th:text="|R$ ${{venda.show.valorEvento}}|"></td>
+
+							<td class="text-right"></td>
+						</tr>
+
+
+
+						<tr>
+							<td></td>
+							<td></td>
+							<td th:text="${compra.quantidade} "></td>
+							<td class="text-right" ><strong>Total:</strong></td>
+							<td class="text-right" th:text="|R$ ${{compra.valorTotal}}|"></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		
+	</div>
+	<div>
+	
+	</div>
+	
+
+			
+	<div class="col-sm-2">
+		<input type="text" class="form-control centro" name="nomeComprador" placeholder="Nome do Comprador" required >
+	</div>
+
+		
+	<div class="centro col-sm-3">
+		<select class="form-control" name="formaPagamento">
+				
+				<option value="boleto">Boleto</option>
+				<option value="cartaoDebito">Cartão de Debito</option>
+				<option value="cartaoCredito">Cartão de Credito</option>
+				</select>
+		</div>
+		
+		
+		<div class="col mb-2 centro">
+			<div class="row">
+				
+				<div class="col-sm-2 ">
+					<button class="btn btn-lg btn-block btn-success text-uppercase">
+						Comprar</button>
+				</div>
+			</div>
+		</div>
+
+</form>
+	
+	
+
+</section>
