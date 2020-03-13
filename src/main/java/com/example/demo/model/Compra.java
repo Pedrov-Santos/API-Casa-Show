@@ -6,7 +6,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
@@ -32,8 +31,7 @@ public class Compra {
 	@NotNull
 	private String nomeComprador;
 	
-	@ManyToOne
-	private ItensCompras itensComprado;
+	
 	
 	private Integer quantidade =0;
 	
@@ -43,16 +41,11 @@ public class Compra {
 	}
 
 	public void setQuantidade(Integer quantidade) {
+		
 		this.quantidade = quantidade;
 	}
 
-	public ItensCompras getItensComprado() {
-		return itensComprado;
-	}
-
-	public void setItensComprado(ItensCompras itensComprado) {
-		this.itensComprado = itensComprado;
-	}
+	
 
 	public Long getCodigo() {
 		return codigo;

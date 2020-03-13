@@ -5,5 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.example.demo.model.CasaShow;
 
 public interface Casas extends JpaRepository<CasaShow, Long>{
-
+	
+	CasaShow findByNomeCasa (String nomeCasa);
 }

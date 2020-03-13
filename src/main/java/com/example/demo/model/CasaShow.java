@@ -12,6 +12,8 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class CasaShow {
 	@Id
@@ -27,15 +29,18 @@ public class CasaShow {
 	@NotNull(message = "Numero Obrigatório.")
 	private int numeroCasa;
 	
+	@NotNull
 	@NotEmpty(message = "Cidade obrigatoria.")
 	@Size(max = 35 , message = "A cidade não pode conter mais de 35 caracteres.")
 	private String cidadeCasa;
 	
+	@NotNull
 	@NotEmpty(message = "Nome da casa obrigatorio.")
 	@Size(max = 15 , message = "O nome da casa não pode conter mais de 15 caracteres.")
 	@Size(min=10 , message = "O endeço deve ter no minímo 10 caracteres.")
 	private String nomeCasa;
 	
+	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="selecinarCasas")
 	private List<NovoShow> novoShow;
 

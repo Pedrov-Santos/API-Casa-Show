@@ -26,7 +26,6 @@ import com.example.demo.model.NovoShow;
 import com.example.demo.model.StatusSelecionarGenero;
 import com.example.demo.repository.Casas;
 import com.example.demo.repository.CompraRepository;
-import com.example.demo.repository.ItensRepository;
 import com.example.demo.repository.Shows;
 
 
@@ -43,8 +42,7 @@ public class EventoController {
 	@Autowired
 	private CompraRepository repositorioCompra;
 	
-	@Autowired
-	private ItensRepository repositorioItens;
+	
 	
 	
 	////////////////////////////////////////////// PAGINAS /////////////////////////////////////////
@@ -124,16 +122,7 @@ public class EventoController {
 		compra.setNomeComprador(nomeComprador);
 		
 		repositorioCompra.saveAndFlush(compra);
-		
-		List<ItensCompras>qualquer=repositorioItens.findAll();
-		
-		for(ItensCompras ic : qualquer) {
-			
-			
-			ic.setCompra(compra);
-			repositorioItens.saveAndFlush(ic);
-		}
-		
+	
 		itensCompra = new ArrayList<>();
 		compra = new Compra();
 		

@@ -26,6 +26,7 @@ public class NovoShow {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo;
 	
+	@NotNull
 	@Size(min = 5 ,message = "O NOME DO EVENTO deve ter no mínimo 5 caracteres.")
 	@Size(max =  20, message = "o NOME DO EVENTO deve contar no máximo 20 caracteres")
 	private String nomeEvento;
@@ -40,11 +41,14 @@ public class NovoShow {
 	@NumberFormat(pattern = "#,##0.00")
 	private Double valorEvento;
 	
+	@NotNull
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	@Temporal(TemporalType.DATE)
 	private Date dataEvento;
 	
+	@NotNull
 	private StatusSelecionarGenero selecionarGenero;
+	
 	
 	@ManyToOne
 	private CasaShow selecinarCasas;

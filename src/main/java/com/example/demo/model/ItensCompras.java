@@ -12,8 +12,6 @@ public class ItensCompras {
 	@ManyToOne
 	private NovoShow show;
 	
-	@ManyToOne
-	private Compra compra;
 	
 	private Integer quantidade =0;
 	
@@ -33,13 +31,7 @@ public class ItensCompras {
 		this.show = show;
 	}
 
-	public Compra getCompra() {
-		return compra;
-	}
-
-	public void setCompra(Compra compra) {
-		this.compra = compra;
-	}
+	
 
 	public int getQuantidade() {
 		return quantidade;
