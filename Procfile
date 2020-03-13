@@ -1,1 +1,1 @@
-web: java -Dserver.port=$Port -Dspring.profiles.active=application-prod.properties $JAVA_OPTS -jar target/CasaEventos-master*.jar
+web: java -Dserver.port=$Port -Dspring.profiles.active=application-prod.properties $JAVA_OPTS -jar target/casaEventos-master*.jar
